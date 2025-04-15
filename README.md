@@ -153,7 +153,7 @@ Implemented metrics:
 
 - **Prompt:** *"A futuristic cityscape at sunset"*
 - **Output:**  
-  ![Unconditional Output](results/images/comparison/sample_0000/unconditional_0000.png)
+  ![Unconditional Output](results/images/comparison/sample_0000/unconditional_0.png)
 
 ---
 
@@ -175,20 +175,20 @@ Implemented metrics:
 
 ---
 
-### 3. **Timestamps Comparison Outputs**
+### 3. **Timestamped Comparison Outputs**
 
-- **First Comparison Output (timestamped):**  
-  ![Comparison 1](results/images/comparison/20250414_190025_comparison.png)
+- **First Comparison Output:**  
+  ![Comparison 1](results/images/comparison/sample_0000/20250414_190025_a_futuristic_cityscape_at_suns_0.png)
 
-- **Second Comparison Output (timestamped):**  
-  ![Comparison 2](results/images/comparison/20250414_202822_comparison.png)
+- **Second Comparison Output:**  
+  ![Comparison 2](results/images/comparison/sample_0000/20250414_202822_canny_a_futuristic_cityscape_at_suns_0.png)
 
 ---
 
 ## Metrics and Report
 
-- 📊 **Comparison Metrics:** Available in `results/metrics/comparison_metrics.json`
-- 📄 **Full Report:** [View comparison_report.md](results/images/comparison_report.md)
+- 📊 **Comparison Metrics:** [`comparison_metrics.json`](results/metrics/comparison_metrics.json)
+- 📄 **Full Report:** [`comparison_report.md`](results/comparison_report.md)
 
 
 ### [**Latent_Diffusion_Large_Files** repository](https://github.com/Akii017/Latent_Diffusion_Large_Files)
@@ -200,7 +200,7 @@ This repository contains large model checkpoints and weight files required for t
 
 ## 📦 Repository Contents
 
-```
+```plaintext
 Latent_Diffusion_Large_Files/
 ├── sd_checkpoints/
 │   ├── sd-v1-5/
