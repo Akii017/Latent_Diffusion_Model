@@ -1,0 +1,9 @@
+{
+    "clip_scores": {
+        "unconditional": 31.710508346557617,
+        "canny": 31.696468353271484
+    },
+    "alignment_scores": {
+        "canny": 0.13319810682893848
+    }
+}
