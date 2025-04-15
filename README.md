@@ -153,7 +153,7 @@ Implemented metrics:
 
 - **Prompt:** *"A futuristic cityscape at sunset"*
 - **Output:**  
-  ![Unconditional Output](results/images/comparison/sample_0000/unconditional_0.png)
+  ![Unconditional Output](results/images/sample_0000/20250414_190025_a_futuristic_cityscape_at_suns_0.png)
 
 ---
 
@@ -178,10 +178,10 @@ Implemented metrics:
 ### 3. **Timestamped Comparison Outputs**
 
 - **First Comparison Output:**  
-  ![Comparison 1](results/images/comparison/sample_0000/20250414_190025_a_futuristic_cityscape_at_suns_0.png)
+  ![Comparison 1](results/images/sample_0000/20250414_190025_a_futuristic_cityscape_at_suns_0.png)
 
 - **Second Comparison Output:**  
-  ![Comparison 2](results/images/comparison/sample_0000/20250414_202822_canny_a_futuristic_cityscape_at_suns_0.png)
+  ![Comparison 2](results/images/sample_0000/20250414_202822_canny_a_futuristic_cityscape_at_suns_0.png)
 
 ---
 
