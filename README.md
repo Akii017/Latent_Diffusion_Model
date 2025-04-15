@@ -81,6 +81,13 @@ Download the necessary model checkpoints:
 
 Place these checkpoints in the `models/sd_checkpoints/` and `models/controlnet/` directories respectively.
 
+
+The pretrained models required for this project are stored in a separate repository due to size limitations.
+
+### [**Latent_Diffusion_Large_Files** repository](https://github.com/Akii017/Latent_Diffusion_Large_Files)
+
+Clone it and copy the models into the `models/` folder as described in its README.
+
 ## Usage
 
 ### Training a Model
@@ -131,8 +138,6 @@ Implemented metrics:
 - **LPIPS** (perceptual similarity)
 - **Control Alignment** (custom metrics)
 
-## Results
-
 ### Performance Metrics
 
 | Model          | FID ↓ | CLIP Score ↑ | Control Accuracy ↑ |
@@ -142,16 +147,104 @@ Implemented metrics:
 | SDXL           | 14.5  | 0.87        | -                 |
 | SD 1.5 + Canny | 15.8  | 0.83        | 92.4%             |
 
-### Sample Outputs
+## Sample Outputs
 
-1. **Text-to-Image**:
-   - Prompt: "A futuristic cityscape at sunset"  
-   ![Cityscape](https://example.com/samples/cityscape_sunset.png)
+### 1. **Text-to-Image (Unconditional)**
 
-2. **Canny Edge Control**:
-   - Prompt: "Cyberpunk character portrait"  
-   ![Edge Map](https://example.com/controls/cyberpunk_edge.png) → 
-   ![Generated](https://example.com/samples/cyberpunk_portrait.png)
+- **Prompt:** *"A futuristic cityscape at sunset"*
+- **Output:**  
+  ![Unconditional Output](results/images/comparison/sample_0000/unconditional_0000.png)
+
+---
+
+### 2. **Canny Edge Control**
+
+- **Prompt:** *"Cyberpunk character portrait using canny edge input"*
+
+- **Input Edge Map:**  
+  ![Canny Edge Input](results/images/comparison/sample_0000/canny_0.png)
+
+- **Condition Input:**  
+  ![Condition Input](results/images/comparison/sample_0000/condition_canny.png)
+
+- **Original Input Image:**  
+  ![Original Input](results/images/comparison/sample_0000/input.png)
+
+- **Generated Output:**  
+  ![Comparison Output](results/images/comparison/sample_0000/comparison_0000.png)
+
+---
+
+### 3. **Timestamps Comparison Outputs**
+
+- **First Comparison Output (timestamped):**  
+  ![Comparison 1](results/images/comparison/20250414_190025_comparison.png)
+
+- **Second Comparison Output (timestamped):**  
+  ![Comparison 2](results/images/comparison/20250414_202822_comparison.png)
+
+---
+
+## Metrics and Report
+
+- 📊 **Comparison Metrics:** Available in `results/metrics/comparison_metrics.json`
+- 📄 **Full Report:** [View comparison_report.md](results/images/comparison_report.md)
+
+
+### [**Latent_Diffusion_Large_Files** repository](https://github.com/Akii017/Latent_Diffusion_Large_Files)
+
+```markdown
+# Latent Diffusion Large Files Repository
+
+This repository contains large model checkpoints and weight files required for the main research project [Latent Diffusion Models Research](https://github.com/Akii017/latent_diffusion_research), which cannot be stored directly in the main repo due to GitHub LFS limits.
+
+## 📦 Repository Contents
+
+```
+Latent_Diffusion_Large_Files/
+├── sd_checkpoints/
+│   ├── sd-v1-5/
+│   │   ├── model.safetensors
+│   │   ├── config.json
+│   │   └── ...
+├── controlnet/
+│   ├── control_v11f1p_sd15_depth.pth
+│   ├── control_v11p_sd15_canny.pth
+│   ├── ...
+└── README.md
+```
+
+## 🔄 How to Use
+
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/Akii017/Latent_Diffusion_Large_Files.git
+   ```
+
+2. **Copy model folders into your main project**:
+   ```bash
+   cp -r Latent_Diffusion_Large_Files/sd_checkpoints <path-to-main-repo>/models/
+   cp -r Latent_Diffusion_Large_Files/controlnet <path-to-main-repo>/models/
+   ```
+
+   Your final structure should look like:
+   ```
+   latent_diffusion_research/
+   └── models/
+       ├── sd_checkpoints/
+       └── controlnet/
+   ```
+
+3. Alternatively, if you're using the provided `scripts/download_models.py` from the main repo, follow the instructions in that script to automate model setup.
+
+## 📌 Why a Separate Repo?
+
+Due to GitHub’s [LFS bandwidth quotas](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github), we maintain all large binaries in this dedicated repository. This ensures:
+
+- Smaller and faster cloning of the main repository  
+- Easier updates and modularity for model files  
+- Avoiding GitHub LFS overage errors
+
 
 ## Future Work
 
